@@ -4,7 +4,7 @@ server:
 spring:
     data:
         mongodb:
-            uri: mongodb+srv://admin:admin12345@cluster0.7mgcx.mongodb.net/current-service?retryWrites=true&w=majority
+            uri: mongodb+srv://admin:admin12345@cluster0.7mgcx.mongodb.net/customer-service?retryWrites=true&w=majority
                 
 eureka:
     client:
