@@ -1,0 +1,20 @@
+server:
+  port: 9100
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customer-service
+          uri: http://localhost:9001
+          predicates:
+            - Path=/api/customer/**
+        - id: current-service
+          uri: http://localhost:9002
+          predicates:
+            - Path=/api/currentAccount/**
